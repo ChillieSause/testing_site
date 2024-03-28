@@ -1,0 +1,160 @@
+
+/* база */
+
+:root{
+    --one: #a61af8;
+    --two: #b033f8;
+    --three: #b94bf9;
+    --four: #c364fa;
+    --five: #cd7dfb;
+    --six: #d695fc;
+    --seven: #e0aefc;
+}
+
+@keyframes background-pan {
+    from{
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200%;
+    }
+}
+
+
+@font-face {
+    font-family: "AdultSwim";
+    src: url(Adult-Swim-Font.ttf);
+  }
+
+
+canvas{
+
+    position:absolute;
+    opacity: 0.6;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+
+
+body {
+    background: black;
+    font-family: "AdultSwim", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-size: 100% 100%;
+    
+
+}
+
+h1 {
+  color: white;
+  justify-content: center;
+  font-family: "AdultSwim", sans-serif;
+  font-weight: 1000;
+  text-align: center;
+
+}
+
+h1 > .magic{
+    animation: background-pan 4s linear infinite;
+    background: linear-gradient(
+        to right, 
+        var(--one), var(--two), var(--three), var(--four), var(--five), var(--six), var(--seven), var(--six), var(--five), var(--four), var(--three), var(--two), var(--one)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    white-space: nowrap;
+}
+
+.button-container {
+  margin-top: 10px;
+  width: 310px; 
+  height: 300px;
+  border-radius: 5%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: rgb(100, 100, 100);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  vertical-align: middle;
+  min-width: 200px;
+}
+
+
+
+img{
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+/* кнопки */
+
+
+/* #005580 */
+
+#yt_button{
+    background-color: #c4302b;
+    transition: 300ms;
+} 
+
+#gt_button{
+    background-color: #6e5494;
+    transition: 300ms;
+} 
+
+#tg_button{
+    background-color: #0088cc;
+    transition: 300ms;
+} 
+
+
+#gt_button:hover{
+    background-color: #564273;
+    transition: 300ms;
+} 
+
+#tg_button:hover{
+    background-color: #006699;
+    transition: 300ms;
+} 
+
+
+#yt_button:hover{
+    background-color: #9a2622;
+    transition: 300ms;
+} 
+
+/* #gt_button::before{
+    content: url('city_after.png');
+    float: left;
+} 
+
+#tg_button:before{
+    content: url('man.png');
+    float: left;
+} 
+ */
+
+/* #yt_button:before{
+    background-color: #c4302b;
+    transition: 300ms;
+}  */
